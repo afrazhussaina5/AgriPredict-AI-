@@ -1,0 +1,39 @@
+# AgriPredict AI - backend runtime dependencies
+#
+# Version strategy (Phase 1 decision):
+#   BOUNDED ranges (>=minimum, <next-major) instead of exact pins or no bounds.
+#   Why: exact pins go stale and miss security patches; no bounds risks a
+#   breaking major release installing unexpectedly. Bounded ranges let pip
+#   pick the newest compatible version while staying inside known-safe majors.
+#   When a lockfile tool (uv/poetry) is adopted later, we can lock exactly.
+
+# PyJWT signs and verifies the short-lived access tokens issued after OTP
+# verification. HS256 only - the platform never uses a third-party JWT service.
+PyJWT>=2.9,<3.0
+
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.9,<3.0
+pydantic-settings>=2.5,<3.0
+python-dotenv>=1.0,<2.0
+httpx>=0.27,<1.0
+
+# --- Phase 3: database ---
+# SQLAlchemy 2.x async ORM (async_session, AsyncAttrs). The [asyncio] extra is
+# REQUIRED: it pulls in 'greenlet', which SQLAlchemy needs to run awaitables
+# inside sync-style ORM code. Without it, `import sqlalchemy.ext.asyncio`
+# raises ImportError at test-collection time.
+# asyncpg is the async PostgreSQL driver used against Supabase.
+# Alembic owns schema migrations only - it never creates or drops a database.
+sqlalchemy[asyncio]>=2.0.36,<3.0
+asyncpg>=0.30,<1.0
+alembic>=1.14,<2.0
+
+# --- outbound HTTP ---
+# httpx above covers our own API calls (and the FastAPI TestClient). aiohttp
+# is the async client for two *outbound* integrations that are not our own
+# service and must never block the event loop: the Fast2SMS OTP gateway
+# (app/services/sms/fast2sms.py) and the data.gov.in market price extract
+# (app/services/market_service.py). Both import it at module scope, so it is
+# a hard runtime dependency, not an optional extra.
+aiohttp>=3.9,<4.0

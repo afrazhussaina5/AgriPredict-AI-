@@ -1,0 +1,34 @@
+# Tool configuration for the AgriPredict AI backend.
+# Dependencies live in requirements*.txt (see Phase 1 decision in
+# docs/phases/phase_01_foundation.md); this file only configures tools.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["__pycache__", ".venv"]
+
+[tool.ruff.lint]
+# "I" (import sorting) is intentionally left out until ruff can be executed
+# locally; enable it once `ruff check` runs on this machine.
+select = ["E", "F", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test fixtures build SQL/Csv strings that are naturally longer than 100 chars.
+# Breaking them up would hurt readability more than it helps.
+"tests/*" = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true
+# NOTE: no pydantic mypy plugin. The plugin changes how `Settings(...)` is
+# type-checked and cannot be validated until mypy runs locally; leaving it off
+# keeps the check predictable. Re-evaluate once `mypy app` runs cleanly.

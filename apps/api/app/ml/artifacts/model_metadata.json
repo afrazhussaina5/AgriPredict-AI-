@@ -1,0 +1,89 @@
+{
+  "model_version": "v1.0-agmarknet-benchmark",
+  "trained_at": "2026-10-20T10:47:37.900680+00:00",
+  "training_samples": 14093,
+  "test_samples": 3524,
+  "features": [
+    "Commodity",
+    "Grade",
+    "State",
+    "District",
+    "Market"
+  ],
+  "target": "Modal_x0020_Price",
+  "metrics": {
+    "baseline_commodity_median": {
+      "mae": 1446.74,
+      "rmse": 2818.55,
+      "r2": 0.7795
+    },
+    "baseline_district_mean": {
+      "mae": 1095.74,
+      "rmse": 2453.01,
+      "r2": 0.833
+    },
+    "ml_model": {
+      "mae": 1265.89,
+      "rmse": 3385.61,
+      "r2": 0.6818,
+      "residual_std": 3364.81
+    }
+  },
+  "commodity_medians": {
+    "Absinthe": 4543.5,
+    "Ajwan": 16125.0,
+    "Alasande Gram": 10000.0,
+    "Almond(Badam)": 102500.0,
+    "Alsandikai": 3700.0,
+    "Amaranthus": 2750.0,
+    "Amla(Nelli Kai)": 8250.0,
+    "Amranthas Red": 4000.0,
+    "Anthorium": 50.0,
+    "Apple": 8500.0,
+    "Arecanut(Betelnut/Supari)": 35991.0,
+    "Asalia": 7135.0,
+    "Asgand": 1680.0,
+    "Ashgourd": 2250.0,
+    "Ashwagandha": 14500.0,
+    "Astera": 34000.0,
+    "Avare Dal": 6053.0,
+    "Avocado": 15000.0,
+    "Baby Corn": 2750.0,
+    "Bajra(Pearl Millet/Cumbu)": 2375.0,
+    "Banana": 4500.0,
+    "Banana - Green": 3225.0,
+    "Barley(Jau)": 2925.5,
+    "Basmati Rice": 3800.0,
+    "Beans": 8000.0,
+    "Beetroot": 4500.0,
+    "Bengal Gram Dal(Chana Dal)": 8187.5,
+    "Bengal Gram(Gram)(Whole)": 6900.0,
+    "Betal Leaves": 16000.0,
+    "Bhindi(Ladies Finger)": 2950.0,
+    "Big Gram": 9200.0,
+    "Bitter gourd": 5000.0,
+    "Black Gram Dal(Urd Dal)": 9000.0,
+    "Black Gram(Urd Beans)(Whole)": 8100.0,
+    "Black pepper": 68500.0,
+    "Bottle gourd": 1900.0,
+    "Brinjal": 2750.0,
+    "Broken Rice": 1800.0,
+    "Broomstick(Flower Broom)": 8000.0,
+    "Bunch Beans": 3800.0,
+    "Cabbage": 2200.0,
+    "Capsicum": 5775.0,
+    "Cardamom": 315000.0,
+    "Carnation": 220.0,
+    "Carrot": 4400.0,
+    "Cashewnuts": 13000.0,
+    "Castor Seed": 8226.0,
+    "Cauliflower": 2800.0,
+    "Chakotha": 4000.0,
+    "Chapparad Avare": 3200.0
+  },
+  "data_limitations": [
+    "Dataset represents cross-sectional Agmarknet market observations on 2026-10-17.",
+    "Predictions reflect prevailing conditional modal price benchmarks by crop, location and grade.",
+    "Estimates are decision-support benchmarks and do not constitute guaranteed future prices."
+  ]
+}

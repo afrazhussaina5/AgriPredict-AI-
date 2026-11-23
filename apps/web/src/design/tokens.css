@@ -1,0 +1,349 @@
+/* AgriPredict AI — design tokens (premium edition)
+   Single source of truth for color, type, spacing, radius, shadow, border,
+   motion, icon, layout, components and trust/badge semantics.
+
+   Rules:
+   - Every visual decision here; components reference tokens, never raw values.
+   - Dark mode is a real palette, not a simple inversion.
+   - Reduced motion is honored everywhere motion is used.
+   - Trust/badge tokens exist so "verified / estimate / forecast / potential"
+     labels stay consistent across the product.
+   - No fake prices, buyers, forecasts or statistics live in this file. */
+
+/* ============================================================
+   COLOR — semantic tokens
+   ============================================================ */
+
+:root {
+  /* ---- Surfaces ---- */
+  --color-bg: #F4FAF6;          /* luminous airy background */
+  --color-surface: #ffffff;     /* crisp white cards */
+  --color-surface-raised: #ffffff;
+  --color-surface-alt: #EBF8F2; /* fresh light mint surface */
+  --color-surface-muted: #F2FBF7;
+  --color-overlay: rgba(18, 64, 48, 0.45);
+
+  /* ---- Text ---- */
+  --color-text: #19261F;         /* high-readability primary text */
+  --color-text-strong: #0C1A13;
+  --color-text-secondary: #4A6356; /* secondary text */
+  --color-text-muted: #6C8276;
+  --color-text-inverse: #ffffff;
+  --color-text-on-primary: #ffffff;
+
+  /* ---- Brand / agricultural intelligence (Luminous Light Mint + Emerald Glow) ---- */
+  --color-brand: #1E8E62;        /* vibrant modern green */
+  --color-brand-strong: #156B49; /* rich balanced emerald */
+  --color-brand-soft: #E8F8F0;   /* radiant mint glow surface */
+  --color-brand-ink: #0E3E2B;
+  --color-brand-glow: rgba(30, 142, 98, 0.18);
+
+  /* harvest gold & amber — for high-value recommendations */
+  --color-warm: #B8820B;         /* readable golden amber */
+  --color-warm-bg: #F3B72A;      /* vibrant harvest gold badge */
+  --color-warm-soft: #FEF8E7;    /* warm golden background glow */
+  --color-warm-ink: #6B4900;
+
+  /* sky blue — for buyers, weather & verified logistics */
+  --color-sky: #0284C7;
+  --color-sky-soft: #E0F2FE;
+  --color-sky-border: #7DD3FC;
+
+  /* earth neutral for subtle context stripes / dividers */
+  --color-earth: #7D8880;
+  --color-earth-soft: #E5ECE7;
+
+  /* ---- Primary action colour ---- */
+  --color-primary: #1E8E62;
+  --color-primary-strong: #156B49;
+  --color-primary-soft: #E8F8F0;
+
+  /* ---- Status (semantic) ---- */
+  --color-success: #1a7a4a;
+  --color-success-soft: #e0f5ea;
+  --color-success-border: #7fc9a2;
+  --color-warning: #8a5a00;
+  --color-warning-soft: #fdf3dd;
+  --color-warning-border: #e7c98a;
+  --color-error: #b3261e;
+  --color-error-soft: #fbe9e7;
+  --color-error-border: #e9b4b0;
+  --color-info: #0b5cad;
+  --color-info-soft: #e6f0fb;
+  --color-info-border: #a9cbef;
+
+  /* ---- Borders ---- */
+  --color-border: #DCE3DC;       /* borders */
+  --color-border-strong: #B4C5B8;
+  --color-border-subtle: #EBF0EB;
+  --color-border-on-bg: rgba(32, 41, 35, 0.10);
+
+  /* ---- Chart palette (calm, distinguishable, accessible) ---- */
+  --chart-1: #26745A;
+  --chart-2: #145c8a;
+  --chart-3: #C89A20;
+  --chart-4: #5a7a3a;
+  --chart-5: #7a4b8a;
+  --chart-muted: #9bb3a6;
+  --chart-positive: #1a7a4a;
+  --chart-negative: #b3261e;
+
+  /* ---- Transparent tints (panels, chips, skeletons) ---- */
+  --tint-surface: rgba(255, 255, 255, 0.72);
+  --tint-panel: rgba(255, 255, 255, 0.65);
+  --tint-ghost: rgba(255, 255, 255, 0.48);
+  --shadow-tint: rgba(21, 63, 53, 0.06);
+}
+
+/* ---- Dark mode (real palette, not an inversion) ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0e1512;
+    --color-surface: #172018;
+    --color-surface-raised: #1c2a1f;
+    --color-surface-alt: #1f2e23;
+    --color-surface-muted: #243328;
+    --color-overlay: rgba(0, 0, 0, 0.65);
+
+    --color-text: #e8f1eb;
+    --color-text-strong: #f3f8f4;
+    --color-text-secondary: #b4c6bb;
+    --color-text-muted: #86988d;
+    --color-text-inverse: #0e1512;
+    --color-text-on-primary: #0e1512;
+
+    --color-brand: #4db88a;
+    --color-brand-strong: #6bd4a5;
+    --color-brand-soft: #163120;
+    --color-brand-ink: #cef4de;
+    --color-brand-glow: rgba(77, 184, 138, 0.2);
+
+    --color-warm: #f0c86a;
+    --color-warm-bg: #d4a72c;
+    --color-warm-soft: #2c2210;
+    --color-warm-ink: #f5dfa0;
+
+    --color-earth: #b3aa9c;
+    --color-earth-soft: #26211b;
+
+    --color-success: #56c286;
+    --color-success-soft: #12301f;
+    --color-success-border: #2f7d58;
+    --color-warning: #f0b96b;
+    --color-warning-soft: #2d210b;
+    --color-warning-border: #8a6320;
+    --color-error: #e0645f;
+    --color-error-soft: #2e1714;
+    --color-error-border: #9e3f3a;
+    --color-info: #6aa0e0;
+    --color-info-soft: #10233b;
+    --color-info-border: #3a6bb0;
+
+    --color-border: #2b3d33;
+    --color-border-strong: #3f564a;
+    --color-border-subtle: #243328;
+    --color-border-on-bg: rgba(255, 255, 255, 0.10);
+
+    --chart-1: #4db88a;
+    --chart-2: #6aa0e0;
+    --chart-3: #f0c86a;
+    --chart-4: #a9c072;
+    --chart-5: #b78fd6;
+    --chart-muted: #5e736a;
+    --chart-positive: #56c286;
+    --chart-negative: #e0645f;
+
+    --tint-surface: rgba(20, 32, 22, 0.72);
+    --tint-panel: rgba(20, 32, 22, 0.55);
+    --tint-ghost: rgba(20, 32, 22, 0.4);
+    --shadow-tint: rgba(0, 0, 0, 0.42);
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+:root {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Inter', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Telugu',
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Numerals deserve extra care because prices/qty live everywhere */
+  --font-mono-nums:
+    'SF Mono', 'JetBrains Mono', 'Roboto Mono', ui-monospace, monospace;
+
+  /* Size scale — intentional, not random */
+  --font-size-2xs: 0.7rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: clamp(1.15rem, 2vw + 0.7rem, 1.4rem);
+  --font-size-2xl: clamp(1.45rem, 3vw + 0.7rem, 1.9rem);
+  --font-size-3xl: clamp(1.8rem, 4vw + 0.8rem, 2.5rem);
+  --font-size-hero: clamp(2.2rem, 6vw + 1rem, 3.8rem);
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.55;
+  --line-height-relaxed: 1.7;
+  --line-height: var(--line-height-normal);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Letter spacing for small labels / eyebrows */
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.03em;
+  --letter-spacing-eyebrow: 0.07em;
+
+  /* numeral readability */
+  --tabular-nums: 'tnum' 1px;
+  --num-letter-spacing: -0.02em;
+  --num-size-lg: 1.25rem;
+  --num-size-xl: 1.7rem;
+  --num-size-hero: 2.4rem;
+  --num-weight: 700;
+}
+
+/* ============================================================
+   SPACING — 4px base
+   ============================================================ */
+
+:root {
+  --space-1: 0.25rem;   /*  4px */
+  --space-2: 0.5rem;    /*  8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-7: 2rem;      /* 32px */
+  --space-8: 2.5rem;    /* 40px */
+  --space-9: 3rem;      /* 48px */
+  --space-10: 4rem;     /* 64px */
+}
+
+/* ============================================================
+   RADIUS
+   ============================================================ */
+
+:root {
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-md-2: 0.625rem;
+  --radius-lg: 0.75rem;
+  --radius-lg-2: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-pill: 999px;
+}
+
+/* ============================================================
+   SHADOW
+   ============================================================ */
+
+:root {
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px var(--shadow-tint);
+  --shadow-sm: 0 1px 4px var(--shadow-tint), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px var(--shadow-tint), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px var(--shadow-tint), 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-xl: 0 20px 40px var(--shadow-tint), 0 8px 16px rgba(0,0,0,0.10);
+  --shadow-raised: 0 2px 8px rgba(21, 63, 53, 0.12), 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-card: 0 1px 3px rgba(21, 63, 53, 0.08), 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* ============================================================
+   BORDER HELPERS
+   ============================================================ */
+
+:root {
+  --border-default: 1px solid var(--color-border);
+  --border-strong: 1px solid var(--color-border-strong);
+  --border-subtle: 1px solid var(--color-border-subtle);
+  --border-brand: 1px solid var(--color-brand);
+  --border-error: 1px solid var(--color-error);
+}
+
+/* ============================================================
+   MOTION
+   ============================================================ */
+
+:root {
+  --motion-instant: 80ms;
+  --motion-fast: 150ms;
+  --motion-base: 220ms;
+  --motion-slow: 350ms;
+  --motion-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Precise motion tokens specified in redesign specification */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: var(--transition-normal);
+}
+
+/* ============================================================
+   FOCUS / ACCESSIBILITY
+   ============================================================ */
+
+:root {
+  --focus-ring: 0 0 0 3px rgba(38, 116, 90, 0.40);
+  --focus-ring-error: 0 0 0 3px rgba(179, 38, 30, 0.30);
+}
+
+/* ============================================================
+   ICON SIZES
+   ============================================================ */
+
+:root {
+  --icon-xs: 0.875rem;
+  --icon-sm: 1rem;
+  --icon-md: 1.25rem;
+  --icon-lg: 1.5rem;
+  --icon-xl: 2rem;
+  --icon-2xl: 2.5rem;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+:root {
+  --layout-content: 40rem;
+  --layout-prose:   52rem;
+  --layout-max:     72rem;
+  --layout-ultra:   86rem;
+}
+
+/* ============================================================
+   COMPONENT TOKENS
+   ============================================================ */
+
+:root {
+  /* Header */
+  --header-height: 3.5rem;
+
+  /* Buttons */
+  --btn-height-lg: 3rem;
+  --btn-padding-lg: var(--space-3) var(--space-7);
+  --btn-font-size: var(--font-size-md);
+  --btn-font-weight: var(--font-weight-semibold);
+
+  /* Trust / data badge semantics */
+  --trust-verified-bg:    var(--color-success-soft);
+  --trust-verified-color: var(--color-success);
+  --trust-estimate-bg:    var(--color-info-soft);
+  --trust-estimate-color: var(--color-info);
+  --trust-forecast-bg:    var(--color-warning-soft);
+  --trust-forecast-color: var(--color-warning);
+  --trust-potential-bg:   var(--color-warm-soft);
+  --trust-potential-color: var(--color-warm);
+}

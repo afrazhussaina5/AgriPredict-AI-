@@ -1,0 +1,82 @@
+# AgriPredict AI - continuous integration
+#
+# Runs on every push and pull request. Uses NO production secrets, connects to
+# NO external services, and touches NO databases. Safe by design.
+
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  backend:
+    name: Backend (pytest, ruff, mypy)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/api
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: apps/api/requirements-dev.txt
+
+      - name: Install dependencies (bounded versions)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      # Phase 3: migration scripts must be syntactically valid and the revision
+      # graph must be consistent. `alembic heads` does not open a connection, so
+      # the placeholder DSN below is never actually used or contacted.
+      - name: Check Alembic configuration
+        env:
+          ENVIRONMENT: test
+        run: alembic heads
+
+      - name: Lint (ruff)
+        run: ruff check .
+
+      - name: Type check (mypy)
+        run: mypy app
+
+      - name: Tests (pytest)
+        # ENVIRONMENT=test is forced in tests/conftest.py, so the suite runs
+        # against isolated in-memory SQLite and never touches a real database.
+        run: pytest --cov=app --cov-report=term-missing
+
+  frontend:
+    name: Frontend (lint, typecheck, tests, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # NOTE: `npm install` (not `npm ci`) until package-lock.json is generated
+      # locally on the first `npm install` and committed. Then switch to `npm ci`
+      # for faster, lockfile-exact CI installs.
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint (eslint)
+        run: npm run lint
+
+      - name: Type check (tsc)
+        run: npm run typecheck
+
+      - name: Unit tests (vitest)
+        run: npm run test
+
+      - name: Production build
+        run: npm run build

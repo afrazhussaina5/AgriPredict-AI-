@@ -1,0 +1,33 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.17.0
+2 info using node@v24.19.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\.npmrc
+5 silly config load:file:D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Roaming\npm\etc\npmrc
+6 verbose title npm ls
+7 verbose argv "ls" "--global" "--depth" "0"
+8 verbose logfile logs-max:10 dir:D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Local\npm-cache\_logs\2026-10-08T09_35_29_468Z-
+9 verbose logfile D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Local\npm-cache\_logs\2026-10-08T09_35_29_468Z-debug-0.log
+10 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+11 silly logfile done cleaning log files
+12 verbose stack Error: ENOENT: no such file or directory, lstat 'D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Roaming\npm'
+12 verbose stack     at async lstat (node:internal/fs/promises:1086:18)
+12 verbose stack     at async #loadActual (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\load-actual.js:99:20)
+12 verbose stack     at async LS.initTree (C:\Program Files\nodejs\node_modules\npm\lib\commands\ls.js:211:18)
+12 verbose stack     at async LS.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\ls.js:72:18)
+12 verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:193:9)
+12 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:67:5)
+13 error code ENOENT
+14 error syscall lstat
+15 error path D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Roaming\npm
+16 error errno -4058
+17 error enoent ENOENT: no such file or directory, lstat 'D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Roaming\npm'
+18 error enoent This is related to npm not being able to find a file.
+18 error enoent
+19 verbose cwd D:\Projects\AgriPredict-AI free
+20 verbose os Windows_NT 10.0.26300
+21 verbose node v24.19.0
+22 verbose npm  v11.17.0
+23 verbose exit -4058
+24 verbose code -4058
+25 error A complete log of this run can be found in: D:\Projects\AgriPredict-AI free\.freebuff\sponsored-runtime\***\home\AppData\Local\npm-cache\_logs\2026-10-08T09_35_29_468Z-debug-0.log

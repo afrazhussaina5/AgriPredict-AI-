@@ -1,0 +1,59 @@
+# Environment & Credentials
+.env
+.env.local
+.env.*.local
+
+# Python Cache & Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Linters
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+*.sqlite3
+*.db
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Node.js (frontend)
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# Python virtual environment (new backend)
+.venv/
+venv/
+
+# Local environment files stay out of Git (never commit secrets)
+apps/**/.env
+apps/**/.env.local

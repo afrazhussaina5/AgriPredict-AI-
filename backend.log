@@ -1,0 +1,228 @@
+INFO:     Started server process [16648]
+INFO:     Waiting for application startup.
+Starting AgriPredict AI Backend...
+2026-10-06 00:32:27,931 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-10-06 00:32:27,932 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("states")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("states")
+2026-10-06 00:32:27,932 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,936 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("districts")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("districts")
+2026-10-06 00:32:27,936 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,937 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("subdistricts")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("subdistricts")
+2026-10-06 00:32:27,937 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,937 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("locations")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("locations")
+2026-10-06 00:32:27,937 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,938 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("location_search_logs")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("location_search_logs")
+2026-10-06 00:32:27,938 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,939 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("mandi_commodities")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("mandi_commodities")
+2026-10-06 00:32:27,939 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,939 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("mandis")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("mandis")
+2026-10-06 00:32:27,939 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,940 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("mandi_commodity_details")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("mandi_commodity_details")
+2026-10-06 00:32:27,940 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,941 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("commodities")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("commodities")
+2026-10-06 00:32:27,941 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,941 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("market_prices")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("market_prices")
+2026-10-06 00:32:27,942 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,942 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("historical_prices")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("historical_prices")
+2026-10-06 00:32:27,942 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,942 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("market_price_fetch_logs")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("market_price_fetch_logs")
+2026-10-06 00:32:27,943 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,943 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("buyer_commodities")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("buyer_commodities")
+2026-10-06 00:32:27,943 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,943 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("buyer_locations")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("buyer_locations")
+2026-10-06 00:32:27,944 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,944 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("buyers")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("buyers")
+2026-10-06 00:32:27,944 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,945 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("buyer_commodity_details")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("buyer_commodity_details")
+2026-10-06 00:32:27,945 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,945 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("buyer_documents")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("buyer_documents")
+2026-10-06 00:32:27,945 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,946 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("lots")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("lots")
+2026-10-06 00:32:27,946 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,946 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("lot_members")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("lot_members")
+2026-10-06 00:32:27,947 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,947 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("buyer_interests")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("buyer_interests")
+2026-10-06 00:32:27,947 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,947 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("lot_timeline_events")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("lot_timeline_events")
+2026-10-06 00:32:27,948 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,948 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("farmers")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("farmers")
+2026-10-06 00:32:27,948 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,949 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("fpo_commodities")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("fpo_commodities")
+2026-10-06 00:32:27,949 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,949 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("fpo_mandis")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("fpo_mandis")
+2026-10-06 00:32:27,949 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,949 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("fpos")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("fpos")
+2026-10-06 00:32:27,950 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,950 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("fpo_members")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("fpo_members")
+2026-10-06 00:32:27,950 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,950 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("fpo_aggregation_plans")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("fpo_aggregation_plans")
+2026-10-06 00:32:27,951 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,951 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("route_cache")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("route_cache")
+2026-10-06 00:32:27,951 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,952 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("geocode_cache")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("geocode_cache")
+2026-10-06 00:32:27,952 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,952 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("transport_rates")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("transport_rates")
+2026-10-06 00:32:27,952 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,952 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("storage_rates")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("storage_rates")
+2026-10-06 00:32:27,952 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,953 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("sync_logs")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("sync_logs")
+2026-10-06 00:32:27,953 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,953 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("sync_schedules")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("sync_schedules")
+2026-10-06 00:32:27,953 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,954 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("data_quality_reports")
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("data_quality_reports")
+2026-10-06 00:32:27,954 INFO sqlalchemy.engine.Engine [raw sql] ()
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+2026-10-06 00:32:27,956 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:backend.core.database:Seeding core reference data...
+Database initialized.
+2026-10-06 00:32:28,175 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-10-06 00:32:28,182 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT states.id AS states_id, states.name AS states_name, states.code AS states_code, states.is_union_territory AS states_is_union_territory, states.created_at AS states_created_at, states.updated_at AS states_updated_at 
+FROM states) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT states.id AS states_id, states.name AS states_name, states.code AS states_code, states.is_union_territory AS states_is_union_territory, states.created_at AS states_created_at, states.updated_at AS states_updated_at 
+FROM states) AS anon_1
+2026-10-06 00:32:28,182 INFO sqlalchemy.engine.Engine [generated in 0.00050s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00050s] ()
+2026-10-06 00:32:28,194 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT commodities.id AS commodities_id, commodities.name AS commodities_name, commodities.variety AS commodities_variety, commodities.category AS commodities_category, commodities.icon AS commodities_icon, commodities.unit AS commodities_unit, commodities.default_qty AS commodities_default_qty, commodities.shelf_life_days AS commodities_shelf_life_days, commodities.storage_cost_per_day_qtl AS commodities_storage_cost_per_day_qtl, commodities.base_transport_rate_per_km_qtl AS commodities_base_transport_rate_per_km_qtl, commodities.base_price AS commodities_base_price, commodities.predicted_price AS commodities_predicted_price, commodities.grade_multipliers AS commodities_grade_multipliers, commodities.has_ml_model AS commodities_has_ml_model, commodities.model_version AS commodities_model_version, commodities.model_accuracy AS commodities_model_accuracy, commodities.arrival_trend AS commodities_arrival_trend, commodities.demand_index AS commodities_demand_index, commodities.created_at AS commodities_created_at, commodities.updated_at AS commodities_updated_at 
+FROM commodities) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT commodities.id AS commodities_id, commodities.name AS commodities_name, commodities.variety AS commodities_variety, commodities.category AS commodities_category, commodities.icon AS commodities_icon, commodities.unit AS commodities_unit, commodities.default_qty AS commodities_default_qty, commodities.shelf_life_days AS commodities_shelf_life_days, commodities.storage_cost_per_day_qtl AS commodities_storage_cost_per_day_qtl, commodities.base_transport_rate_per_km_qtl AS commodities_base_transport_rate_per_km_qtl, commodities.base_price AS commodities_base_price, commodities.predicted_price AS commodities_predicted_price, commodities.grade_multipliers AS commodities_grade_multipliers, commodities.has_ml_model AS commodities_has_ml_model, commodities.model_version AS commodities_model_version, commodities.model_accuracy AS commodities_model_accuracy, commodities.arrival_trend AS commodities_arrival_trend, commodities.demand_index AS commodities_demand_index, commodities.created_at AS commodities_created_at, commodities.updated_at AS commodities_updated_at 
+FROM commodities) AS anon_1
+2026-10-06 00:32:28,201 INFO sqlalchemy.engine.Engine [generated in 0.00670s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00670s] ()
+2026-10-06 00:32:28,211 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT transport_rates.id AS transport_rates_id, transport_rates.state_id AS transport_rates_state_id, transport_rates.district_id AS transport_rates_district_id, transport_rates.commodity_id AS transport_rates_commodity_id, transport_rates.vehicle_type AS transport_rates_vehicle_type, transport_rates.rate_per_km_per_qtl AS transport_rates_rate_per_km_per_qtl, transport_rates.min_distance_km AS transport_rates_min_distance_km, transport_rates.max_distance_km AS transport_rates_max_distance_km, transport_rates.min_charge AS transport_rates_min_charge, transport_rates.loading_charge_per_qtl AS transport_rates_loading_charge_per_qtl, transport_rates.unloading_charge_per_qtl AS transport_rates_unloading_charge_per_qtl, transport_rates.effective_from AS transport_rates_effective_from, transport_rates.effective_until AS transport_rates_effective_until, transport_rates.source AS transport_rates_source, transport_rates.source_url AS transport_rates_source_url, transport_rates.verified AS transport_rates_verified, transport_rates.created_at AS transport_rates_created_at, transport_rates.updated_at AS transport_rates_updated_at 
+FROM transport_rates) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT transport_rates.id AS transport_rates_id, transport_rates.state_id AS transport_rates_state_id, transport_rates.district_id AS transport_rates_district_id, transport_rates.commodity_id AS transport_rates_commodity_id, transport_rates.vehicle_type AS transport_rates_vehicle_type, transport_rates.rate_per_km_per_qtl AS transport_rates_rate_per_km_per_qtl, transport_rates.min_distance_km AS transport_rates_min_distance_km, transport_rates.max_distance_km AS transport_rates_max_distance_km, transport_rates.min_charge AS transport_rates_min_charge, transport_rates.loading_charge_per_qtl AS transport_rates_loading_charge_per_qtl, transport_rates.unloading_charge_per_qtl AS transport_rates_unloading_charge_per_qtl, transport_rates.effective_from AS transport_rates_effective_from, transport_rates.effective_until AS transport_rates_effective_until, transport_rates.source AS transport_rates_source, transport_rates.source_url AS transport_rates_source_url, transport_rates.verified AS transport_rates_verified, transport_rates.created_at AS transport_rates_created_at, transport_rates.updated_at AS transport_rates_updated_at 
+FROM transport_rates) AS anon_1
+2026-10-06 00:32:28,211 INFO sqlalchemy.engine.Engine [generated in 0.00048s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00048s] ()
+2026-10-06 00:32:28,219 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT storage_rates.id AS storage_rates_id, storage_rates.state_id AS storage_rates_state_id, storage_rates.district_id AS storage_rates_district_id, storage_rates.commodity_id AS storage_rates_commodity_id, storage_rates.storage_type AS storage_rates_storage_type, storage_rates.rate_per_day_per_qtl AS storage_rates_rate_per_day_per_qtl, storage_rates.min_charge_per_day AS storage_rates_min_charge_per_day, storage_rates.min_quantity_qtl AS storage_rates_min_quantity_qtl, storage_rates.facility_name AS storage_rates_facility_name, storage_rates.facility_id AS storage_rates_facility_id, storage_rates.capacity_mt AS storage_rates_capacity_mt, storage_rates.available_capacity_mt AS storage_rates_available_capacity_mt, storage_rates.effective_from AS storage_rates_effective_from, storage_rates.effective_until AS storage_rates_effective_until, storage_rates.seasonal_multiplier AS storage_rates_seasonal_multiplier, storage_rates.source AS storage_rates_source, storage_rates.source_url AS storage_rates_source_url, storage_rates.verified AS storage_rates_verified, storage_rates.created_at AS storage_rates_created_at, storage_rates.updated_at AS storage_rates_updated_at 
+FROM storage_rates) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT storage_rates.id AS storage_rates_id, storage_rates.state_id AS storage_rates_state_id, storage_rates.district_id AS storage_rates_district_id, storage_rates.commodity_id AS storage_rates_commodity_id, storage_rates.storage_type AS storage_rates_storage_type, storage_rates.rate_per_day_per_qtl AS storage_rates_rate_per_day_per_qtl, storage_rates.min_charge_per_day AS storage_rates_min_charge_per_day, storage_rates.min_quantity_qtl AS storage_rates_min_quantity_qtl, storage_rates.facility_name AS storage_rates_facility_name, storage_rates.facility_id AS storage_rates_facility_id, storage_rates.capacity_mt AS storage_rates_capacity_mt, storage_rates.available_capacity_mt AS storage_rates_available_capacity_mt, storage_rates.effective_from AS storage_rates_effective_from, storage_rates.effective_until AS storage_rates_effective_until, storage_rates.seasonal_multiplier AS storage_rates_seasonal_multiplier, storage_rates.source AS storage_rates_source, storage_rates.source_url AS storage_rates_source_url, storage_rates.verified AS storage_rates_verified, storage_rates.created_at AS storage_rates_created_at, storage_rates.updated_at AS storage_rates_updated_at 
+FROM storage_rates) AS anon_1
+2026-10-06 00:32:28,220 INFO sqlalchemy.engine.Engine [generated in 0.00046s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00046s] ()
+2026-10-06 00:32:28,228 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT sync_schedules.id AS sync_schedules_id, sync_schedules.name AS sync_schedules_name, sync_schedules.sync_type AS sync_schedules_sync_type, sync_schedules.cron_expression AS sync_schedules_cron_expression, sync_schedules.timezone AS sync_schedules_timezone, sync_schedules.default_parameters AS sync_schedules_default_parameters, sync_schedules.default_filters AS sync_schedules_default_filters, sync_schedules.is_active AS sync_schedules_is_active, sync_schedules.max_concurrent_runs AS sync_schedules_max_concurrent_runs, sync_schedules.timeout_seconds AS sync_schedules_timeout_seconds, sync_schedules.max_retries AS sync_schedules_max_retries, sync_schedules.retry_delay_seconds AS sync_schedules_retry_delay_seconds, sync_schedules.notify_on_success AS sync_schedules_notify_on_success, sync_schedules.notify_on_failure AS sync_schedules_notify_on_failure, sync_schedules.notification_emails AS sync_schedules_notification_emails, sync_schedules.notification_webhook AS sync_schedules_notification_webhook, sync_schedules.last_run_at AS sync_schedules_last_run_at, sync_schedules.last_run_status AS sync_schedules_last_run_status, sync_schedules.next_run_at AS sync_schedules_next_run_at, sync_schedules.created_at AS sync_schedules_created_at, sync_schedules.updated_at AS sync_schedules_updated_at 
+FROM sync_schedules) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT sync_schedules.id AS sync_schedules_id, sync_schedules.name AS sync_schedules_name, sync_schedules.sync_type AS sync_schedules_sync_type, sync_schedules.cron_expression AS sync_schedules_cron_expression, sync_schedules.timezone AS sync_schedules_timezone, sync_schedules.default_parameters AS sync_schedules_default_parameters, sync_schedules.default_filters AS sync_schedules_default_filters, sync_schedules.is_active AS sync_schedules_is_active, sync_schedules.max_concurrent_runs AS sync_schedules_max_concurrent_runs, sync_schedules.timeout_seconds AS sync_schedules_timeout_seconds, sync_schedules.max_retries AS sync_schedules_max_retries, sync_schedules.retry_delay_seconds AS sync_schedules_retry_delay_seconds, sync_schedules.notify_on_success AS sync_schedules_notify_on_success, sync_schedules.notify_on_failure AS sync_schedules_notify_on_failure, sync_schedules.notification_emails AS sync_schedules_notification_emails, sync_schedules.notification_webhook AS sync_schedules_notification_webhook, sync_schedules.last_run_at AS sync_schedules_last_run_at, sync_schedules.last_run_status AS sync_schedules_last_run_status, sync_schedules.next_run_at AS sync_schedules_next_run_at, sync_schedules.created_at AS sync_schedules_created_at, sync_schedules.updated_at AS sync_schedules_updated_at 
+FROM sync_schedules) AS anon_1
+2026-10-06 00:32:28,229 INFO sqlalchemy.engine.Engine [generated in 0.00054s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00054s] ()
+2026-10-06 00:32:28,230 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:backend.core.database:Core data seeding completed.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8009 (Press CTRL+C to quit)
+Core data seeded.
+2026-10-06 00:32:34,309 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-10-06 00:32:34,323 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT mandis.id AS mandis_id, mandis.mandi_id AS mandis_mandi_id, mandis.e_nam_id AS mandis_e_nam_id, mandis.name AS mandis_name, mandis.apmc_name AS mandis_apmc_name, mandis.local_name AS mandis_local_name, mandis.state_id AS mandis_state_id, mandis.district_id AS mandis_district_id, mandis.subdistrict_id AS mandis_subdistrict_id, mandis.location_id AS mandis_location_id, mandis.address AS mandis_address, mandis.pincode AS mandis_pincode, mandis.latitude AS mandis_latitude, mandis.longitude AS mandis_longitude, mandis.status AS mandis_status, mandis.is_e_nam AS mandis_is_e_nam, mandis.market_type AS mandis_market_type, mandis.phone AS mandis_phone, mandis.email AS mandis_email, mandis.website AS mandis_website, mandis.facilities AS mandis_facilities, mandis.verification_status AS mandis_verification_status, mandis.official_source AS mandis_official_source, mandis.source_url AS mandis_source_url, mandis.last_verified_at AS mandis_last_verified_at, mandis.verified_by AS mandis_verified_by, mandis.verification_notes AS mandis_verification_notes, mandis.operating_hours AS mandis_operating_hours, mandis.market_days AS mandis_market_days, mandis.arrival_capacity_qtl AS mandis_arrival_capacity_qtl, mandis.price_offset_multiplier AS mandis_price_offset_multiplier, mandis.transport_cost_per_km_qtl AS mandis_transport_cost_per_km_qtl, mandis.storage_cost_per_day_qtl AS mandis_storage_cost_per_day_qtl, mandis.rating AS mandis_rating, mandis.created_at AS mandis_created_at, mandis.updated_at AS mandis_updated_at 
+FROM mandis 
+WHERE mandis.verification_status = ? AND mandis.status = ?) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT mandis.id AS mandis_id, mandis.mandi_id AS mandis_mandi_id, mandis.e_nam_id AS mandis_e_nam_id, mandis.name AS mandis_name, mandis.apmc_name AS mandis_apmc_name, mandis.local_name AS mandis_local_name, mandis.state_id AS mandis_state_id, mandis.district_id AS mandis_district_id, mandis.subdistrict_id AS mandis_subdistrict_id, mandis.location_id AS mandis_location_id, mandis.address AS mandis_address, mandis.pincode AS mandis_pincode, mandis.latitude AS mandis_latitude, mandis.longitude AS mandis_longitude, mandis.status AS mandis_status, mandis.is_e_nam AS mandis_is_e_nam, mandis.market_type AS mandis_market_type, mandis.phone AS mandis_phone, mandis.email AS mandis_email, mandis.website AS mandis_website, mandis.facilities AS mandis_facilities, mandis.verification_status AS mandis_verification_status, mandis.official_source AS mandis_official_source, mandis.source_url AS mandis_source_url, mandis.last_verified_at AS mandis_last_verified_at, mandis.verified_by AS mandis_verified_by, mandis.verification_notes AS mandis_verification_notes, mandis.operating_hours AS mandis_operating_hours, mandis.market_days AS mandis_market_days, mandis.arrival_capacity_qtl AS mandis_arrival_capacity_qtl, mandis.price_offset_multiplier AS mandis_price_offset_multiplier, mandis.transport_cost_per_km_qtl AS mandis_transport_cost_per_km_qtl, mandis.storage_cost_per_day_qtl AS mandis_storage_cost_per_day_qtl, mandis.rating AS mandis_rating, mandis.created_at AS mandis_created_at, mandis.updated_at AS mandis_updated_at 
+FROM mandis 
+WHERE mandis.verification_status = ? AND mandis.status = ?) AS anon_1
+2026-10-06 00:32:34,324 INFO sqlalchemy.engine.Engine [generated in 0.00065s] ('VERIFIED', 'ACTIVE')
+INFO:sqlalchemy.engine.Engine:[generated in 0.00065s] ('VERIFIED', 'ACTIVE')
+2026-10-06 00:32:34,342 INFO sqlalchemy.engine.Engine SELECT count(*) AS count_1 
+FROM (SELECT buyers.id AS buyers_id, buyers.buyer_id AS buyers_buyer_id, buyers.legal_name AS buyers_legal_name, buyers.trade_name AS buyers_trade_name, buyers.category AS buyers_category, buyers.registration_number AS buyers_registration_number, buyers.gstin AS buyers_gstin, buyers.pan AS buyers_pan, buyers.fssai_license AS buyers_fssai_license, buyers.apmc_license AS buyers_apmc_license, buyers.verification_status AS buyers_verification_status, buyers.verification_source AS buyers_verification_source, buyers.verification_documents AS buyers_verification_documents, buyers.verified_at AS buyers_verified_at, buyers.verified_by AS buyers_verified_by, buyers.verification_expires_at AS buyers_verification_expires_at, buyers.verification_notes AS buyers_verification_notes, buyers.contact_person AS buyers_contact_person, buyers.contact_phone AS buyers_contact_phone, buyers.contact_email AS buyers_contact_email, buyers.website AS buyers_website, buyers.address AS buyers_address, buyers.state_id AS buyers_state_id, buyers.district_id AS buyers_district_id, buyers.pincode AS buyers_pincode, buyers.latitude AS buyers_latitude, buyers.longitude AS buyers_longitude, buyers.payment_terms AS buyers_payment_terms, buyers.min_order_value AS buyers_min_order_value, buyers.credit_period_days AS buyers_credit_period_days, buyers.requires_quality_cert AS buyers_requires_quality_cert, buyers.rating AS buyers_rating, buyers.deals_completed AS buyers_deals_completed, buyers.total_volume_qtl AS buyers_total_volume_qtl, buyers.total_value_inr AS buyers_total_value_inr, buyers.on_time_payment_rate AS buyers_on_time_payment_rate, buyers.dispute_rate AS buyers_dispute_rate, buyers.is_active AS buyers_is_active, buyers.is_accepting_orders AS buyers_is_accepting_orders, buyers.availability_notes AS buyers_availability_notes, buyers.is_demo AS buyers_is_demo, buyers.demo_disclaimer AS buyers_demo_disclaimer, buyers.created_at AS buyers_created_at, buyers.updated_at AS buyers_updated_at, buyers.created_by AS buyers_created_by 
+FROM buyers 
+WHERE buyers.verification_status = ? AND buyers.is_active = 1 AND buyers.is_demo = 0) AS anon_1
+INFO:sqlalchemy.engine.Engine:SELECT count(*) AS count_1 
+FROM (SELECT buyers.id AS buyers_id, buyers.buyer_id AS buyers_buyer_id, buyers.legal_name AS buyers_legal_name, buyers.trade_name AS buyers_trade_name, buyers.category AS buyers_category, buyers.registration_number AS buyers_registration_number, buyers.gstin AS buyers_gstin, buyers.pan AS buyers_pan, buyers.fssai_license AS buyers_fssai_license, buyers.apmc_license AS buyers_apmc_license, buyers.verification_status AS buyers_verification_status, buyers.verification_source AS buyers_verification_source, buyers.verification_documents AS buyers_verification_documents, buyers.verified_at AS buyers_verified_at, buyers.verified_by AS buyers_verified_by, buyers.verification_expires_at AS buyers_verification_expires_at, buyers.verification_notes AS buyers_verification_notes, buyers.contact_person AS buyers_contact_person, buyers.contact_phone AS buyers_contact_phone, buyers.contact_email AS buyers_contact_email, buyers.website AS buyers_website, buyers.address AS buyers_address, buyers.state_id AS buyers_state_id, buyers.district_id AS buyers_district_id, buyers.pincode AS buyers_pincode, buyers.latitude AS buyers_latitude, buyers.longitude AS buyers_longitude, buyers.payment_terms AS buyers_payment_terms, buyers.min_order_value AS buyers_min_order_value, buyers.credit_period_days AS buyers_credit_period_days, buyers.requires_quality_cert AS buyers_requires_quality_cert, buyers.rating AS buyers_rating, buyers.deals_completed AS buyers_deals_completed, buyers.total_volume_qtl AS buyers_total_volume_qtl, buyers.total_value_inr AS buyers_total_value_inr, buyers.on_time_payment_rate AS buyers_on_time_payment_rate, buyers.dispute_rate AS buyers_dispute_rate, buyers.is_active AS buyers_is_active, buyers.is_accepting_orders AS buyers_is_accepting_orders, buyers.availability_notes AS buyers_availability_notes, buyers.is_demo AS buyers_is_demo, buyers.demo_disclaimer AS buyers_demo_disclaimer, buyers.created_at AS buyers_created_at, buyers.updated_at AS buyers_updated_at, buyers.created_by AS buyers_created_by 
+FROM buyers 
+WHERE buyers.verification_status = ? AND buyers.is_active = 1 AND buyers.is_demo = 0) AS anon_1
+2026-10-06 00:32:34,343 INFO sqlalchemy.engine.Engine [generated in 0.00066s] ('VERIFIED',)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00066s] ('VERIFIED',)
+2026-10-06 00:32:34,345 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2026-10-06 00:32:34,347 INFO sqlalchemy.engine.Engine SELECT commodities.id AS commodities_id, commodities.name AS commodities_name, commodities.variety AS commodities_variety, commodities.category AS commodities_category, commodities.icon AS commodities_icon, commodities.unit AS commodities_unit, commodities.default_qty AS commodities_default_qty, commodities.shelf_life_days AS commodities_shelf_life_days, commodities.storage_cost_per_day_qtl AS commodities_storage_cost_per_day_qtl, commodities.base_transport_rate_per_km_qtl AS commodities_base_transport_rate_per_km_qtl, commodities.base_price AS commodities_base_price, commodities.predicted_price AS commodities_predicted_price, commodities.grade_multipliers AS commodities_grade_multipliers, commodities.has_ml_model AS commodities_has_ml_model, commodities.model_version AS commodities_model_version, commodities.model_accuracy AS commodities_model_accuracy, commodities.arrival_trend AS commodities_arrival_trend, commodities.demand_index AS commodities_demand_index, commodities.created_at AS commodities_created_at, commodities.updated_at AS commodities_updated_at 
+FROM commodities
+INFO:sqlalchemy.engine.Engine:SELECT commodities.id AS commodities_id, commodities.name AS commodities_name, commodities.variety AS commodities_variety, commodities.category AS commodities_category, commodities.icon AS commodities_icon, commodities.unit AS commodities_unit, commodities.default_qty AS commodities_default_qty, commodities.shelf_life_days AS commodities_shelf_life_days, commodities.storage_cost_per_day_qtl AS commodities_storage_cost_per_day_qtl, commodities.base_transport_rate_per_km_qtl AS commodities_base_transport_rate_per_km_qtl, commodities.base_price AS commodities_base_price, commodities.predicted_price AS commodities_predicted_price, commodities.grade_multipliers AS commodities_grade_multipliers, commodities.has_ml_model AS commodities_has_ml_model, commodities.model_version AS commodities_model_version, commodities.model_accuracy AS commodities_model_accuracy, commodities.arrival_trend AS commodities_arrival_trend, commodities.demand_index AS commodities_demand_index, commodities.created_at AS commodities_created_at, commodities.updated_at AS commodities_updated_at 
+FROM commodities
+2026-10-06 00:32:34,347 INFO sqlalchemy.engine.Engine [generated in 0.00038s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00038s] ()
+2026-10-06 00:32:34,353 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:     127.0.0.1:60789 - "GET /api/health HTTP/1.1" 200 OK
+2026-10-06 00:32:34,367 INFO sqlalchemy.engine.Engine COMMIT
+INFO:sqlalchemy.engine.Engine:COMMIT

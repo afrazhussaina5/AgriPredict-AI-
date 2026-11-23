@@ -1,0 +1,23 @@
+[project]
+name = "agripredict-ai"
+version = "2.0.0"
+description = "AgriPredict AI - Smart Market Intelligence & Price Discovery Platform"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "requests",
+    "python-dotenv",
+    "pandas",
+    "numpy",
+    "sqlalchemy",
+    "pydantic",
+    "pydantic-settings",
+    "alembic",
+    "psycopg2-binary",
+    "redis",
+    "httpx",
+]
+
+[tool.vercel]
+entrypoint = "backend.main:app"

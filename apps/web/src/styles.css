@@ -1,0 +1,77 @@
+/* AgriPredict AI - base document styles (Phase 2).
+   Design tokens live in design/tokens.css, component styles in
+   design/components.css. This file only sets document-level defaults. */
+
+/* Every element is sized border-box. Without this, an element with
+   `width: 100%` plus horizontal padding is wider than its container, which made
+   every screen overflow sideways at 360px (requirement N9). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-2xl);
+  margin: 0 0 var(--space-3);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  margin: 0 0 var(--space-3);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+p {
+  margin: 0 0 var(--space-3);
+}
+
+.lede {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-primary-strong);
+}
+
+code {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.05rem 0.35rem;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+ul {
+  padding-left: 1.25rem;
+}

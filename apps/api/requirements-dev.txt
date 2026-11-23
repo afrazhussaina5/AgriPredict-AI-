@@ -1,0 +1,12 @@
+# AgriPredict AI - backend development and test dependencies
+-r requirements.txt
+
+pytest>=8.3,<9.0
+pytest-asyncio>=0.24,<2.0
+pytest-cov>=5.0,<7.0
+ruff>=0.8,<1.0
+mypy>=1.13,<2.0
+
+# Phase 3: tests MUST run against an isolated local database, never against
+# Supabase. aiosqlite is an async SQLite driver used only by the test suite.
+aiosqlite>=0.20,<1.0

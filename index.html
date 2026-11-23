@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-Powered Market Intelligence and Price Discovery Platform answering When, Where and to Whom farmers should sell their produce for maximum net profit.">
+  <title>AgriPredict AI - Smarter decisions. Better markets. Stronger farms.</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Chart.js 4.4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Design System Styles -->
+  <link rel="stylesheet" href="./static/css/tokens.css">
+  <link rel="stylesheet" href="./static/css/components.css">
+  <link rel="stylesheet" href="./static/css/layout.css">
+  <link rel="stylesheet" href="./static/css/motion.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <!-- Generated utility classes (npm run build:css). Loaded last so utilities
+       win over component styles for layout/display toggles like .hidden/.flex. -->
+  <link rel="stylesheet" href="./static/css/tailwind.css">
+</head>
+<body>
+
+  <!-- Application Shell -->
+  <div class="app-shell">
+    
+    <!-- Desktop Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-brand" onclick="window.AgriApp.navigateTo('/'); return false;">
+          <div class="sidebar-brand-logo">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <div class="sidebar-brand-text">
+            <div class="sidebar-brand-name">AgriPredict AI</div>
+            <div class="sidebar-brand-sub">Smarter markets</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-body">
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Navigation</div>
+          <ul class="nav-list" id="sidebarNavLinks">
+            <!-- Injected dynamically by app.js -->
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">Services</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#" class="nav-link" onclick="window.AgriApp.navigateTo('/dashboard'); return false;">
+                <i class="fa-solid fa-truck nav-icon"></i>
+                <span class="nav-label">
+                  <span class="nav-label-primary">Transport</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link" onclick="window.AgriApp.navigateTo('/dashboard'); return false;">
+                <i class="fa-solid fa-warehouse nav-icon"></i>
+                <span class="nav-label">
+                  <span class="nav-label-primary">Storage</span>
+                </span>
+              </a>
+            </li>
+            <li class="hidden lg:block">
+              <a href="#" class="nav-link" onclick="window.AgriApp.navigateTo('/dashboard'); return false;">
+                <i class="fa-solid fa-landmark nav-icon"></i>
+                <span class="nav-label">
+                  <span class="nav-label-primary">Government Schemes</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="sidebar-user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="sidebar-user-info">
+            <div class="sidebar-user-name">Farmer User</div>
+            <div class="sidebar-user-role">Individual Farmer</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
+
+    <!-- Main Content Area -->
+    <div class="app-shell-inner">
+      
+      <!-- Desktop Top Bar -->
+      <header class="top-bar top-bar-desktop">
+        <div class="top-bar-inner top-bar-desktop">
+          <div class="top-bar-left">
+            <button id="mobileMenuToggle" class="btn btn-icon btn-tertiary lg:hidden" aria-label="Open menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="flex items-center gap-3">
+              <a href="/" class="sidebar-brand" onclick="window.AgriApp.navigateTo('/'); return false;" style="text-decoration: none;">
+                <div class="sidebar-brand-logo">
+                  <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="sidebar-brand-text">
+                  <div class="sidebar-brand-name">AgriPredict AI</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <nav id="mainNavLinks" class="hidden lg:flex items-center gap-1">
+            <!-- Injected dynamically by app.js -->
+          </nav>
+
+          <div class="top-bar-right">
+            <div class="hidden sm:flex items-center gap-2">
+              <div class="relative">
+                <select id="langSelect" class="select-field">
+                  <option value="en">🇬🇧 English</option>
+                  <option value="hi">🇮🇳 हिन्दी</option>
+                  <option value="te">🇮🇳 తెలుగు</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="themeToggleBtn" class="btn btn-icon btn-tertiary" aria-label="Toggle dark mode">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Mobile Top Bar -->
+      <header class="top-bar top-bar-mobile">
+        <div class="top-bar-inner top-bar-mobile">
+          <div class="top-bar-left">
+            <button id="mobileMenuToggleMobile" class="btn btn-icon btn-tertiary" aria-label="Open menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <a href="/" class="sidebar-brand" onclick="window.AgriApp.navigateTo('/'); return false;" style="text-decoration: none;">
+              <div class="sidebar-brand-logo" style="width: 32px; height: 32px; font-size: 14px;">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div class="sidebar-brand-text">
+                <div class="sidebar-brand-name" style="font-size: 14px;">AgriPredict AI</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="top-bar-right">
+            <div class="relative" style="width: 120px;">
+              <select id="langSelectMobile" class="select-field" style="font-size: 12px;">
+                <option value="en">🌐 English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="te">తెలుగు</option>
+              </select>
+            </div>
+
+            <button id="themeToggleBtnMobile" class="btn btn-icon btn-tertiary" aria-label="Toggle dark mode">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="page-content">
+          <div id="appMainContent">
+            <!-- Injected dynamically by app.js router -->
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="bottom-nav lg:hidden">
+    <button onclick="window.AgriApp.navigateTo('/')" data-mobile-route="/" class="bottom-nav-item">
+      <i class="fa-solid fa-house bottom-nav-icon"></i>
+      <span class="bottom-nav-label">Home</span>
+    </button>
+    <button onclick="window.AgriApp.navigateTo('/analyze')" data-mobile-route="/analyze" class="bottom-nav-item">
+      <i class="fa-solid fa-chart-simple bottom-nav-icon"></i>
+      <span class="bottom-nav-label">Market</span>
+    </button>
+    <button onclick="window.AgriApp.navigateTo('/dashboard')" data-mobile-route="/dashboard" class="bottom-nav-item">
+      <i class="fa-solid fa-chart-line bottom-nav-icon"></i>
+      <span class="bottom-nav-label">Dashboard</span>
+    </button>
+    <button onclick="window.AgriApp.navigateTo('/buyers')" data-mobile-route="/buyers" class="bottom-nav-item">
+      <i class="fa-solid fa-handshake bottom-nav-icon"></i>
+      <span class="bottom-nav-label">Buyers</span>
+    </button>
+    <button onclick="window.AgriApp.navigateTo('/dashboard')" data-mobile-route="/dashboard" class="bottom-nav-item">
+      <i class="fa-solid fa-bullhorn bottom-nav-icon"></i>
+      <span class="bottom-nav-label">Schemes</span>
+    </button>
+  </nav>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Modals -->
+  <div id="dealSlipModal" class="modal-overlay fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div id="dealSlipModalContent" class="modal-content w-full max-w-2xl my-8"></div>
+  </div>
+
+  <div id="produceLotModal" class="modal-overlay fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+    <div id="produceLotModalContent" class="modal-content w-full max-w-2xl my-8"></div>
+  </div>
+
+  <div id="timelineModal" class="modal-overlay fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+    <div id="timelineModalContent" class="modal-content w-full max-w-xl my-8"></div>
+  </div>
+
+  <!-- Main ES Module Script -->
+  <script type="module" src="./static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* Tailwind entry for the prototype.
+   Utilities only: the prototype's own tokens.css / components.css / layout.css
+   already own base styles and component styling, so preflight is skipped to
+   avoid resetting them. */
+@tailwind utilities;
